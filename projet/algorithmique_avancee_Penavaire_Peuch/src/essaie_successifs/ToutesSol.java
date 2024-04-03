@@ -1,6 +1,7 @@
 package essaie_successifs;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ToutesSol {
@@ -11,14 +12,7 @@ public class ToutesSol {
        
         
         int piece = 0;
-        System.out.println(n);
-        System.out.println(solution);
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+    
         for (int i = 0; i< c.size(); i++) {
             
             piece = c.get(i);
@@ -31,7 +25,6 @@ public class ToutesSol {
                 if (n == 0) { // soltrouvée
                     // écriresol
                     System.out.println(solution);
-                    return;
                 }
                 else {
                     //toutessol(i+1)
@@ -39,7 +32,7 @@ public class ToutesSol {
                 }
             
                 // défaire
-                n += piece;
+                n += solution.get(solution.size() - 1);
                 solution.remove(solution.size() - 1);
             }
             
@@ -55,6 +48,8 @@ public class ToutesSol {
         List<Integer> solution = new ArrayList<>();
         int n = Integer.parseInt(args[0]);
 
+        Collections.shuffle(c);
+        System.out.println(c);
         rendreMonnaie(c, n, solution);        
     }
 }
