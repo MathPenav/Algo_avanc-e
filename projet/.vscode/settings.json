@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "algorythmique_avancee_Penavaire_Peuch/src"
+        "algorythmique_avancee_Penavaire_Peuch/src",
+        "algorithmique_avancee_Penavaire_Peuch/src"
     ]
 }

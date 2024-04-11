@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SolOpt {
+public class SolRapide {
 
     protected static int cpt = 0;
 
-    public static void rendreMonnaieOpt (List<Integer> c, int n, List<Integer> solution, List<Integer> sol_pot){
+    public static void rendreMonnaieRapide (List<Integer> c, int n, List<Integer> solution, List<Integer> sol_pot){
        
         
         int piece = 0;
 
-        for (int j = 0; j< c.size(); j++) {
+        for (int j = 0; j < c.size(); j++) {
             
             piece = c.get(j);
-
+            
             // satisfaisant
             if (n >= 0 && piece <= n){ 
                 // enregistrer
@@ -30,13 +30,16 @@ public class SolOpt {
                     // écriresol
                     System.out.println(solution);
                 }
-                else {
-                    //encore_possible et toutessol(i+1)
+                //encore_possible
+                /* Condition d'élagage : si la liste de pièces sol_pot 
+                    est plus grande que celle appélée solution, alors 
+                    on ne cherche pas plus loin et on défait la dernière pièce */
+                else if (sol_pot.size() <= solution.size()){    
+                    //toutessol(i+1)
                     cpt += 1;
                     System.out.println(cpt);
-                    rendreMonnaieOpt(c, n, solution, sol_pot);
+                    rendreMonnaieRapide(c, n, solution, sol_pot);
                 }
-            
                 // défaire
                 n += sol_pot.get(sol_pot.size() - 1);
                 sol_pot.remove(sol_pot.size() - 1);
@@ -49,6 +52,7 @@ public class SolOpt {
     }
 
     public static void main(String[] args) {
+        
         List<Integer> c = new ArrayList<>(List.of(200, 100, 50, 20, 10, 5, 2, 1));
         List<Integer> solution = new ArrayList<>();
         List<Integer> sol_pot = new ArrayList<>();
@@ -64,6 +68,7 @@ public class SolOpt {
             solution.add(1);
         }
 
-        rendreMonnaieOpt(c, n, solution, sol_pot);        
+        rendreMonnaieRapide(c, n, solution, sol_pot);        
     }
+
 }

@@ -17,12 +17,14 @@ public class ToutesSol {
             
             piece = c.get(i);
 
-            if (n >= 0 && piece <= n){ // satisfaisant
+            // satisfaisant
+            if (n >= 0 && piece <= n){ 
                 // enregistrer
                 solution.add(piece);
                 n -= piece;
 
-                if (n == 0) { // soltrouvée
+                // soltrouvée
+                if (n == 0) { 
                     // écriresol
                     System.out.println(solution);
                 }
