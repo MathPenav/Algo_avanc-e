@@ -56,7 +56,7 @@ public class SolOpt {
         int k;
 
         // Donne une liste de pièce dont l'ordre est choisi au hasard
-        Collections.shuffle(c);
+        //Collections.shuffle(c);
         System.out.println(c);
 
         // Initialise la solution par une liste de pièces de 1 centime

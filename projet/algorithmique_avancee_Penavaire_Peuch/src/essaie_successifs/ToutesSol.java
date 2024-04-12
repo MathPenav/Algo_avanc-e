@@ -50,7 +50,8 @@ public class ToutesSol {
         List<Integer> solution = new ArrayList<>();
         int n = Integer.parseInt(args[0]);
 
-        Collections.shuffle(c);
+        // Donne une liste de pièce dont l'ordre est choisi au hasard
+        //Collections.shuffle(c);
         System.out.println(c);
         rendreMonnaie(c, n, solution);        
     }
