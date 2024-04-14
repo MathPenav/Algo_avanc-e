@@ -48,7 +48,8 @@ public class SolOpt {
         
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {// Pour les test entrer la somme multipliée par 100
+
         List<Integer> c = new ArrayList<>(List.of(200, 100, 50, 20, 10, 5, 2, 1));
         List<Integer> solution = new ArrayList<>();
         List<Integer> sol_pot = new ArrayList<>();
