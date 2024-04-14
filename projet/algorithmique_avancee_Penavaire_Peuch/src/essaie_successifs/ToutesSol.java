@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ToutesSol {
 
-
+    protected static int cpt = 1;
 
     public static void rendreMonnaie (List<Integer> c, int n, List<Integer> solution){
        
@@ -30,6 +30,7 @@ public class ToutesSol {
                 }
                 else {
                     //toutessol(i+1)
+                    cpt += 1;
                     rendreMonnaie(c, n, solution);
                 }
             
@@ -53,6 +54,8 @@ public class ToutesSol {
         // Donne une liste de pièce dont l'ordre est choisi au hasard
         //Collections.shuffle(c);
         System.out.println(c);
-        rendreMonnaie(c, n, solution);        
+
+        rendreMonnaie(c, n, solution);
+        System.out.println("nb d'appels récursifs :"+cpt);
     }
 }

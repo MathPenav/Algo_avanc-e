@@ -6,7 +6,7 @@ import java.util.List;
 
 public class SolOpt {
 
-    protected static int cpt = 0;
+    protected static int cpt = 1;
 
     public static void rendreMonnaieOpt (List<Integer> c, int n, List<Integer> solution, List<Integer> sol_pot){
        
@@ -33,7 +33,7 @@ public class SolOpt {
                 else {
                     //encore_possible et toutessol(i+1)
                     cpt += 1;
-                    System.out.println(cpt);
+                    //System.out.println(cpt);
                     rendreMonnaieOpt(c, n, solution, sol_pot);
                 }
             
@@ -64,6 +64,7 @@ public class SolOpt {
             solution.add(1);
         }
 
-        rendreMonnaieOpt(c, n, solution, sol_pot);        
+        rendreMonnaieOpt(c, n, solution, sol_pot);   
+        System.out.println("nb d'appels récursifs :"+cpt);     
     }
 }

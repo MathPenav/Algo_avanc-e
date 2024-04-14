@@ -6,7 +6,7 @@ import java.util.List;
 
 public class SolRapide {
 
-    protected static int cpt = 0;
+    protected static int cpt = 1;
 
     public static void rendreMonnaieRapide (List<Integer> c, int n, List<Integer> solution, List<Integer> sol_pot){
        
@@ -37,7 +37,7 @@ public class SolRapide {
                 else if (sol_pot.size() <= solution.size()){    
                     //toutessol(i+1)
                     cpt += 1;
-                    System.out.println(cpt);
+                    //System.out.println(cpt);
                     rendreMonnaieRapide(c, n, solution, sol_pot);
                 }
                 // défaire
@@ -68,7 +68,8 @@ public class SolRapide {
             solution.add(1);
         }
 
-        rendreMonnaieRapide(c, n, solution, sol_pot);        
+        rendreMonnaieRapide(c, n, solution, sol_pot);   
+        System.out.println("nb d'appels récursifs :"+cpt);     
     }
 
 }
