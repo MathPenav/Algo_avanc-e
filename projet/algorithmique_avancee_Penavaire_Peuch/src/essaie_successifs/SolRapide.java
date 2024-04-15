@@ -28,7 +28,7 @@ public class SolRapide {
                     solution.clear();
                     solution.addAll(sol_pot);
                     // écriresol
-                    System.out.println(solution);
+                    System.out.println("La suite de pièces à rendre est :"+solution);
                 }
                 //encore_possible
                 /* Condition d'élagage : si la liste de pièces sol_pot 

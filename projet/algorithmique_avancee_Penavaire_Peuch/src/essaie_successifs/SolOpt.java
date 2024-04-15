@@ -28,7 +28,7 @@ public class SolOpt {
                     solution.clear();
                     solution.addAll(sol_pot);
                     // écriresol
-                    System.out.println(solution);
+                    System.out.println("La suite de pièces à rendre est :"+solution);
                 }
                 else {
                     //encore_possible et toutessol(i+1)

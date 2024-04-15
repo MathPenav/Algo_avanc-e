@@ -24,8 +24,8 @@ public class Greedy {
             }
         }
         // soltrouvée
-        System.out.println(solution);
-        
+        System.out.println("La suite de pièces à rendre est :"+solution);
+
         return;
     }
 

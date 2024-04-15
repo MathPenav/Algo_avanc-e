@@ -25,7 +25,7 @@ public class NBP {
         //Cas général
         for (int i=1;i < nbp.length;i++){
             for (int j=1;j < nbp[i].length;j++){
-                //NBP(i,j) = 1 + NBP(i,j-c_i) si j >= c_i et NBP(i,j) != -1
+                //NBP(i,j) = 1 + NBP(i,j-c_i) si j >= c_i et NBP(i-1,j) == -1
                 if (c.get(i-1) <= j && nbp[i-1][j] == -1){
                     nbp[i][j] = 1+nbp[i][j-c.get(i-1)];
                 }  
